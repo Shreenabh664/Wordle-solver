@@ -1,13 +1,14 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <math.h>
 
 void read_words(char **words, int *num_words)
 {
     FILE *fp;
     char *line = NULL;
     size_t len = 0;
-    ssize_t read;
+    long read;
     int i = 0;
 
     fp = fopen("words.txt", "r");
@@ -33,6 +34,22 @@ void read_words(char **words, int *num_words)
     fclose(fp);
     if (line)
         free(line);
+}
+
+int has_repeated(char *word)
+{
+    int len = 5;
+    for (int i = 0; i < len; i++)
+    {
+        for (int j = i + 1; j < len; j++)
+        {
+            if (word[i] == word[j])
+            {
+                return 1;
+            }
+        }
+    }
+    return 0;
 }
 
 int has_char(char *word, char c)
@@ -159,6 +176,10 @@ int main()
     dealwith(feedback1, first_word, &num_words, words);
     free(feedback1);
     int rand_num = rand() % num_words;
+    while (has_repeated(words[rand_num]))
+    {
+        rand_num = rand() % num_words;
+    }
     printf("Second word is %s\n", words[rand_num]);
     char *feedback2 = (char *)malloc(sizeof(char) * 5);
     scanf("%s", feedback2);
@@ -176,6 +197,10 @@ int main()
     dealwith(feedback2, words[rand_num], &num_words, words);
     free(feedback2);
     int rand_num2 = rand() % num_words;
+    while (has_repeated(words[rand_num2]))
+    {
+        rand_num2 = rand() % num_words;
+    }
     printf("Third word is %s\n", words[rand_num2]);
     char *feedback3 = (char *)malloc(sizeof(char) * 5);
     scanf("%s", feedback3);
@@ -193,6 +218,10 @@ int main()
     dealwith(feedback3, words[rand_num2], &num_words, words);
     free(feedback3);
     int rand_num3 = rand() % num_words;
+    while (has_repeated(words[rand_num3]))
+    {
+        rand_num3 = rand() % num_words;
+    }
     printf("Fourth word is %s\n", words[rand_num3]);
     char *feedback4 = (char *)malloc(sizeof(char) * 5);
     scanf("%s", feedback4);
