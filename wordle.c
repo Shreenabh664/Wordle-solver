@@ -157,9 +157,9 @@ int main()
     int num_words;
     read_words(words, &num_words);
     printf("%d words read\n", num_words);
-    printf("adieu\n"); // first word printed ADIEU
+    printf("soare\n"); // first word printed SOARE
 
-    char first_word[5] = "adieu";
+    char first_word[5] = "soare";
     char *feedback1 = (char *)malloc(sizeof(char) * 5);
     scanf("%s", feedback1);
     if (strcmp(feedback1, "ggggg") == 0)
