@@ -7,28 +7,17 @@
      <i> Image credit: https://medium.com/@yotamyachmoorgafni </i>
 </p>
 
-Easy to use Wordle Solver, tested extensively on 100+ Wordles. Flaunts a minimalist UI and UX. 
-The new implementation is complete for (almost) all Wordles. \[All known edge cases have been fixed.]
+Easy to use Wordle Solver. Flaunts a minimalist UI and UX. The new implementation is complete for all Wordles and optimizes for minimum tries.
 
 Usage:
-- Run it with `words.txt` in the same directory.
+- Clone and `cd` into this repo.
+- Compile `wordle.c` (uses `math.h` header for entropy calculations so use `-lm` flag with `gcc`).
 - After every word suggested, input the feedback from wordle, e.g. `bbygb` for ⬛️⬛️🟨🟩⬛️
-- The code should quit automatically when it is sure that it has suggested the winning word.
-- If it doesn't quit automatically, input `ggggg` to ensure it quits correctly.
+- Input `ggggg` to ensure it quits correctly when the word matches.
 - If a `floating point exception` is raised, it means you have entered incorrect feedback at some stage.
 
-Example usage 1 (Automatic quitting):
 
-`2314 words read`\
-`saute`\
-bybby\
-`wreak`\
-bbgyb\
-`hyena`\
-bbgyg\
-`enema`
-
-Example usage 2 (Manually quitting):
+Example usage:
 
 `2314 words read`\
 `saute`\
@@ -38,4 +27,5 @@ bgggg\
 `jaunt`\
 ggggg
 
-Please share any failing edge cases in the issues tab. Hack around to improve accuracy, e.g. modify the word file, change the start word, etc.
+New optimizations reduce the number of steps needed significantly in most cases. 
+Read more about the information theory approach here: https://markmliu.medium.com/what-in-the-wordle-5dc5ed94fe2
