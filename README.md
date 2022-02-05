@@ -17,7 +17,7 @@ Usage:
 - If a `floating point exception` is raised, it means you have entered incorrect feedback at some stage.
 
 
-Example usage:
+Example usage:\
 `soare`\
 byybb\
 `bloat`\
@@ -25,12 +25,12 @@ bggyg\
 `aloft`\
 ggggg
 
-Result:
+Result:\
 Wordle 231 3/6
 
-⬛🟨🟨⬛⬛
-⬛🟩🟩🟨🟩
+⬛🟨🟨⬛⬛\
+⬛🟩🟩🟨🟩\
 🟩🟩🟩🟩🟩
 
-New optimizations reduce the number of steps needed significantly in most cases. 
+New optimizations significantly reduce the number of steps needed (in most cases).
 Read more about the information theory approach here: https://markmliu.medium.com/what-in-the-wordle-5dc5ed94fe2
