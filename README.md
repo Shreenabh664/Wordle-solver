@@ -18,14 +18,19 @@ Usage:
 
 
 Example usage:
-
-`2314 words read`\
-`saute`\
-bggyb\
-`vaunt`\
-bgggg\
-`jaunt`\
+`soare`\
+byybb\
+`bloat`\
+bggyg\
+`aloft`\
 ggggg
+
+Result:
+Wordle 231 3/6
+
+⬛🟨🟨⬛⬛
+⬛🟩🟩🟨🟩
+🟩🟩🟩🟩🟩
 
 New optimizations reduce the number of steps needed significantly in most cases. 
 Read more about the information theory approach here: https://markmliu.medium.com/what-in-the-wordle-5dc5ed94fe2
