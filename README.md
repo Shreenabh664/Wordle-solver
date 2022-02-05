@@ -20,7 +20,7 @@ Usage:
 Example usage:\
 `soare`\
 byybb\
-`bloat`\
+`bloat`         <--- The second word might take some time to print (this is the most computationally heavy step) \
 bggyg\
 `aloft`\
 ggggg
