@@ -1,3 +1,4 @@
+#define MAX_WORDS 2315
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -160,7 +161,7 @@ int compute_num_words(char *word, char **words, int num_words, char *feedback)
         strcpy(words_copy[i], words[i]);
     }
     dealwith(feedback, word, &num_words_after, words_copy);
-    for (int i = 0; i < num_words_after; i++)
+    for (int i = 0; i < num_words; i++)
     {
         free(words_copy[i]);
     }
@@ -289,10 +290,10 @@ int main(int argc, char *argv[])
     {
         file_name = argv[1];
     }
-    char **words = (char **)malloc(sizeof(char *) * 2315);
+    char **words = (char **)malloc(sizeof(char *) * MAX_WORDS);
     int num_words;
     read_words(file_name, words, &num_words);
-
+    free(file_name);
     char first_word[6] = "soare";
     printf("soare\n");
 
@@ -326,7 +327,7 @@ int main(int argc, char *argv[])
             break;
         }
     }
-    for (int i = 0; i < num_words; i++)
+    for (int i = 0; i < MAX_WORDS; i++)
     {
         free(words[i]);
     }
