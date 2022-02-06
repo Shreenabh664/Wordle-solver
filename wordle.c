@@ -281,14 +281,14 @@ char *get_word(char **words, int num_words)
 
 int main(int argc, char *argv[])
 {
-    char *file_name = malloc(sizeof(char) * 100);
+    char* file_name = malloc(sizeof(char) * 100);
     if (argc != 2)
     {
-        file_name = "words.txt";
+        strcpy(file_name, "words.txt");
     }
     else
     {
-        file_name = argv[1];
+        strcpy(file_name, argv[1]);
     }
     char **words = (char **)malloc(sizeof(char *) * MAX_WORDS);
     int num_words;
