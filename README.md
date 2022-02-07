@@ -34,3 +34,6 @@ Wordle 231 3/6
 
 New optimizations significantly reduce the number of steps needed (in most cases).
 Read more about the information theory approach here: https://markmliu.medium.com/what-in-the-wordle-5dc5ed94fe2
+
+⚠️ WIP ⚠️ 
+The build is stable on Windows, there are some memory issues on UNIX based OS. Helpful PRs are appreciated.
