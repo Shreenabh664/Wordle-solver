@@ -11,7 +11,8 @@ Easy to use Wordle Solver. Flaunts a minimalist UI and UX. The new implementatio
 
 Usage:
 - Clone and `cd` into this repo.
-- Compile `wordle.c` (uses `math.h` header for entropy calculations so use `-lm` flag with `gcc`).
+- Choose the appropriate C file based on your OS.
+- Compile `wordle-mac-linux.c`/`wordle-win.c` (uses `math.h` header for entropy calculations so use `-lm` flag with `gcc`).
 - After every word suggested, input the feedback from wordle, e.g. `bbygb` for ⬛️⬛️🟨🟩⬛️
 - Input `ggggg` to ensure it quits correctly when the word matches.
 - If a `floating point exception` is raised, it means you have entered incorrect feedback at some stage.
